@@ -192,8 +192,8 @@ section[id], footer[id] { scroll-margin-top: 96px; }
    ================================================================== */
 .hero {
   position: relative; background: var(--emerald); overflow: hidden;
-  padding: clamp(56px, 6vw, 88px) 0 clamp(64px, 6vw, 96px);
-  min-height: clamp(520px, 72vh, 760px);
+  padding: clamp(64px, 8vw, 108px) 0 clamp(72px, 8vw, 116px);
+  min-height: clamp(620px, 84vh, 900px);
   display: flex; align-items: center;
 }
 .hero-pattern {
@@ -212,7 +212,7 @@ section[id], footer[id] { scroll-margin-top: 96px; }
 .hero-bg-image {
   position: absolute; top: 0; right: 0; bottom: 0;
   width: min(68vw, 1180px); height: 100%;
-  object-fit: cover; object-position: center center;
+  object-fit: cover; object-position: right center;
   filter: saturate(0.98) contrast(1.02);
 }
 .hero-media-scrim {
@@ -233,7 +233,7 @@ section[id], footer[id] { scroll-margin-top: 96px; }
 .hero-copy { max-width: min(640px, 54vw); }
 
 .hero-title {
-  font-size: clamp(2.2rem, 3.8vw, 3.6rem);
+  font-size: clamp(2.6rem, 5.4vw, 4.6rem);
   color: var(--cream);
   margin-bottom: 26px;
   letter-spacing: -0.02em;
@@ -798,7 +798,7 @@ section[id], footer[id] { scroll-margin-top: 96px; }
   }
   .hero-bg-image {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    object-position: center center;
+    object-fit: cover; object-position: center center;
   }
   .hero-badge-top {
     top: 16px;
