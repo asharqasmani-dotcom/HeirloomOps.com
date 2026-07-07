@@ -31,15 +31,15 @@
   --font-title: "Cormorant Garamond", "Minion Variable", Georgia, serif;
   --font-body: "Inter", "Helvetica Now", Helvetica, Arial, sans-serif;
 
-  --container: 1600px;
+  --container: 1280px;
   --radius: 22px;
   --radius-sm: 14px;
   --pill: 999px;
   --shadow-soft: 0 24px 60px -30px rgba(0, 20, 20, 0.55);
   --shadow-card: 0 18px 44px -28px rgba(0, 20, 20, 0.45);
 
-  --pad-y: 112px;   /* desktop section padding */
-  --pad-x: 64px;    /* desktop side padding */
+  --pad-y: 88px;    /* desktop section padding */
+  --pad-x: 48px;    /* desktop side padding */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -191,8 +191,8 @@ section[id], footer[id] { scroll-margin-top: 96px; }
    ================================================================== */
 .hero {
   position: relative; background: var(--emerald); overflow: hidden;
-  padding: clamp(64px, 8vw, 108px) 0 clamp(72px, 8vw, 116px);
-  min-height: clamp(620px, 84vh, 900px);
+  padding: clamp(56px, 6vw, 88px) 0 clamp(64px, 6vw, 96px);
+  min-height: clamp(520px, 72vh, 760px);
   display: flex; align-items: center;
 }
 .hero-pattern {
@@ -232,7 +232,7 @@ section[id], footer[id] { scroll-margin-top: 96px; }
 .hero-copy { max-width: min(640px, 54vw); }
 
 .hero-title {
-  font-size: clamp(2.6rem, 5.4vw, 4.6rem);
+  font-size: clamp(2.2rem, 3.8vw, 3.6rem);
   color: var(--cream);
   margin-bottom: 26px;
   letter-spacing: -0.02em;
@@ -902,184 +902,4 @@ section[id], footer[id] { scroll-margin-top: 96px; }
   .why-card { max-width: 100%; padding: 20px 18px; }
   .experience-image { min-height: 360px; aspect-ratio: 4 / 4.8; }
   .card { padding: 30px 26px; }
-}
-
-/* ==================================================================
-   DESKTOP READABILITY — balanced spacing & type (min-width: 1025px)
-   ================================================================== */
-@media (min-width: 1025px) {
-  :root {
-    --container: 1520px;
-    --pad-y: 118px;
-    --pad-x: 60px;
-  }
-
-  body { line-height: 1.66; }
-
-  /* Header + hero — align left edges, reduce empty left gutter */
-  .site-header > .container.header-inner,
-  .hero > .container.hero-inner {
-    margin-left: max(32px, calc((100vw - var(--container)) / 2 - 80px));
-    margin-right: auto;
-    padding-left: 32px;
-    padding-right: var(--pad-x);
-  }
-
-  /* Taller header — more readable logo, nav, and CTA */
-  .site-header > .container.header-inner {
-    height: 140px;
-    min-height: 140px;
-  }
-  .brand-logo { width: 220px; }
-  .primary-nav ul { gap: 44px; }
-  .primary-nav a {
-    font-size: 17.5px;
-    padding: 10px 0;
-    color: var(--cream);
-  }
-  .header-cta { padding: 16px 34px; font-size: 15px; }
-  section[id],
-  footer[id] { scroll-margin-top: 140px; }
-
-  /* Global typography — subtle bumps only */
-  .eyebrow { margin-bottom: 24px; }
-  .section-title { font-size: clamp(2.1rem, 3.4vw, 3.35rem); }
-  .section-lead {
-    margin-top: 24px;
-    font-size: 1.08rem;
-    line-height: 1.62;
-    max-width: 62ch;
-  }
-  .section-head { max-width: 780px; margin-bottom: 60px; }
-
-  /* Hero — copy sits further left, balanced with right-side image */
-  .hero {
-    min-height: clamp(1100px, 90vh, 1200px);
-    padding: clamp(96px, 9vw, 132px) 0 clamp(104px, 9vw, 140px);
-  }
-  .hero-copy {
-    max-width: min(660px, 50vw);
-    display: flex;
-    flex-direction: column;
-    padding: 24px 0 32px;
-  }
-  .hero .eyebrow { margin-bottom: 32px; }
-  .hero-title {
-    font-size: clamp(2.85rem, 5vw, 4.65rem);
-    margin-bottom: 40px;
-    line-height: 1.07;
-  }
-  .hero-lead {
-    font-size: 1.12rem;
-    line-height: 1.72;
-    max-width: 58ch;
-  }
-  .hero-actions { margin: 48px 0 56px; gap: 18px; }
-  .hero-actions .btn { padding: 16px 32px; font-size: 14.5px; }
-  .proof-row { margin-top: 56px; max-width: min(700px, 54vw); }
-  .proof-row li { padding: 34px 26px; font-size: 15px; line-height: 1.5; gap: 18px; }
-  .hero-media-scrim {
-    background:
-      linear-gradient(90deg,
-        var(--emerald) 0%,
-        var(--emerald) 26%,
-        rgba(0, 40, 40, 0.94) 38%,
-        rgba(0, 40, 40, 0.72) 50%,
-        rgba(0, 40, 40, 0.32) 66%,
-        rgba(0, 40, 40, 0.08) 82%,
-        transparent 100%),
-      linear-gradient(180deg, rgba(0, 40, 40, 0.28) 0%, transparent 22%, transparent 78%, rgba(0, 40, 40, 0.32) 100%);
-  }
-  .hero-bg-image {
-    width: min(64vw, 1120px);
-    object-position: center center;
-  }
-  .hero-badge-top {
-    right: calc(min(64vw, 1120px) / 2);
-    transform: translateX(50%);
-  }
-  .hero-overlay-card {
-    right: calc(min(64vw, 1120px) / 2);
-    transform: translateX(50%);
-  }
-
-  /* Marquee */
-  .marquee { padding: 18px 0; }
-  .marquee-track span { font-size: 1.38rem; }
-
-  /* Shared cards */
-  .card-grid { gap: 30px; }
-  .card { padding: 40px 36px; }
-  .card h3 { font-size: 1.8rem; margin-bottom: 12px; }
-  .card p { font-size: 1rem; line-height: 1.62; }
-
-  /* Consistent split / grid gaps */
-  .overview-top,
-  .split,
-  .experience-layout,
-  .contact-layout { gap: clamp(44px, 4.5vw, 72px); }
-
-  /* Overview */
-  .ov-tabs { margin-top: 38px; }
-  .ov-tab { font-size: 14px; padding-bottom: 15px; }
-  .ov-panels { margin-top: 28px; }
-  .ov-panel-text { font-size: 1.02rem; line-height: 1.62; }
-  .ov-checklist { gap: 16px 30px; margin-top: 26px; }
-  .ov-checklist li { font-size: 1rem; }
-  .overview-cards { margin-top: clamp(60px, 7vw, 88px); }
-
-  /* Operating model & growth */
-  .feature-list { gap: 28px; margin-top: 42px; }
-  .feature h3 { font-size: 1.42rem; }
-  .feature p { font-size: 1rem; line-height: 1.62; }
-  .floorplan-frame,
-  .map-frame { padding: 32px; }
-  .stat-card { padding: 26px 24px; }
-  .callout-grid { gap: 28px; margin-top: 46px; }
-  .callout p { font-size: 0.98rem; }
-
-  /* Stakeholder cards */
-  .partners-intro { margin-bottom: 60px; }
-  .partners-cards { gap: 30px; }
-  .partners-card { min-height: 240px; }
-  .partners-card-copy { padding: 34px 28px 34px 36px; }
-  .partners-card h3 { font-size: 1.78rem; }
-  .partners-card p { font-size: 1rem; line-height: 1.62; }
-
-  /* Facility experience */
-  .experience-header,
-  .experience-main { max-width: 640px; }
-  .experience-list { margin-top: 30px; }
-  .experience-list li { padding: 17px 0; font-size: 1.03rem; }
-  .experience-card p { font-size: 1rem; line-height: 1.6; }
-
-  /* Why HeirloomOps */
-  #why .section-head { margin-bottom: 58px; }
-  .why-list { gap: 26px; }
-  .why-card { padding: 36px 34px; gap: 24px; }
-  .why-body h3 { font-size: 1.58rem; }
-  .why-body p { font-size: 1rem; line-height: 1.62; }
-
-  /* Contact */
-  .contact-details { margin-top: 42px; }
-  .contact-form { padding: 40px 44px; }
-  .field input,
-  .field select,
-  .field textarea {
-    font-size: 15.5px;
-    padding: 15px 16px;
-  }
-  .field textarea { min-height: 128px; }
-
-  /* FAQ */
-  #faq .section-head { margin-bottom: 58px; }
-  .faq-item summary { padding: 28px 4px; font-size: 1.55rem; }
-  .faq-answer p { font-size: 1.03rem; line-height: 1.62; }
-
-  /* Footer */
-  .site-footer { padding: 92px 0 36px; }
-  .footer-inner { gap: 52px; padding-bottom: 58px; }
-  .footer-nav a,
-  .footer-contact a { font-size: 1rem; }
-  .footer-bottom p { font-size: 13.5px; }
 }
